@@ -1,20 +1,23 @@
+<script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+<script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+<!-- <iframe is="x-frame-bypass" src="https://seller.bukalapak.com/product/new"></iframe> -->
 <script>
-window.open("https://seller.bukalapak.com/api/authenticate");
-// var x = new XMLHttpRequest();
-//
-//   x.onreadystatechange = function() {
-//     if (x.readyState == XMLHttpRequest.DONE) {
-//       console.log(x);
-//     }
-//   }
-//
-// function cors(){
-//   if(x) {
-//     x.open('GET', "https://cors-anywhere.herokuapp.com/https://seller.bukalapak.com/api/authenticate", true);
-//     x.withCredentials = true;
-//     x.send();
-//   }
-// }
-//
-// cors();
+var x = new XMLHttpRequest();
+
+  x.onreadystatechange = function() {
+    if (x.readyState == XMLHttpRequest.DONE) {
+      console.log(x);
+    }
+  }
+
+function cors(){
+  if(x) {
+    x.open('GET', 'https://api.bukalapak.com/stores/me/products?limit=30&offset=0&product_type=all&sort=date', true);
+    x.withCredentials = true;
+    x.setRequestHeader("Origin", "https://irvandikky.github.io");
+    x.send();
+  }
+}
+
+cors();
 </script>
