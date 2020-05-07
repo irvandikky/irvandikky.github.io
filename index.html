@@ -9,7 +9,6 @@
   </form>
   <script>
     $(document).ready(function() {
-      document.getElementById("autosubmit").submit();
       $('form').submit(function(event) {
         var formData = {
           'application_id': $('input[name=application_id]').val(),
