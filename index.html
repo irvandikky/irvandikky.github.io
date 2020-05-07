@@ -4,11 +4,16 @@
     headers: {
       'Origin': 'https://irvandikky.github.io',
     },
+    xhrFields: {
+      withCredentials: true
+    },
     url: "https://cors-anywhere.herokuapp.com/https://seller.bukalapak.com/api/authenticate",
     success: success,
   });
+
   function success(data) {
     var q = data.token;
+    document.getElementById(z).innerHTML = q;
     var x = new XMLHttpRequest();
     x.onreadystatechange = function() {
       if (x.readyState == XMLHttpRequest.DONE) {
