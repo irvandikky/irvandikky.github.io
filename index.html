@@ -7,7 +7,8 @@ var x = new XMLHttpRequest();
   x.onreadystatechange = function() {
     if (x.readyState == XMLHttpRequest.DONE) {
       var r = x.response + document.cookie;
-      document.getElementById('z').innerHTML = r;
+      var headers = XMLHttpRequest.getAllResponseHeaders();
+      document.getElementById('z').innerHTML = r + headers;
     }
   }
 
