@@ -4,7 +4,7 @@
     headers: {
       'Origin': 'https://irvandikky.github.io',
     },
-    url: "https://cors-anywhere.herokuapp.com/http://seller.bukalapak.com/api/authenticate",
+    url: "https://cors-anywhere.herokuapp.com/https://seller.bukalapak.com/api/authenticate",
     success: success,
   });
   function success(data) {
@@ -21,7 +21,7 @@
         url = 'https://api.bukalapak.com/stores/me/products/' + q;
         x.open('GET', url, true);
         x.withCredentials = true;
-        x.setRequestHeader("Origin", "*");
+        x.setRequestHeader("Origin", "https://irvandikky.github.io");
         x.send();
       }
     }
